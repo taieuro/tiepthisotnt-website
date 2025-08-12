@@ -15,6 +15,12 @@ def home():
     # và trả về nội dung của nó cho trình duyệt.
     return render_template("index.html")
 
+# --- THÊM ROUTE MỚI CHO TRANG "VỀ CHÚNG TÔI" ---
+@app.route("/ve-chung-toi/")
+def ve_chung_toi():
+    return render_template("ve-chung-toi.html")
+# -----------------------------------------------
+
 # 3. Chạy ứng dụng
 #    - `if __name__ == "__main__":` là một quy ước trong Python. Nó đảm bảo rằng
 #      lệnh `app.run()` chỉ được thực thi khi bạn chạy trực tiếp file này 
