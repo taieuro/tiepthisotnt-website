@@ -21,6 +21,12 @@ def ve_chung_toi():
     return render_template("ve-chung-toi.html")
 # -----------------------------------------------
 
+# --- THÊM ROUTE MỚI CHO TRANG "DỊCH VỤ TIẾP THỊ SỐ ĐA KÊNH" ---
+@app.route("/dich-vu-tiep-thi-so-da-kenh/")
+def dich_vu_tiep_thi_so_da_kenh():
+    return render_template("dich-vu-tiep-thi-so-da-kenh.html")
+# -----------------------------------------------
+
 # 3. Chạy ứng dụng
 #    - `if __name__ == "__main__":` là một quy ước trong Python. Nó đảm bảo rằng
 #      lệnh `app.run()` chỉ được thực thi khi bạn chạy trực tiếp file này 
