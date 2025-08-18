@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Be Vietnam Pro', sans-serif;
@@ -27,6 +27,10 @@
             flex-direction: column;
             padding-top: 40px; /* Space for header */
             padding-bottom: 40px; /* Space for footer */
+        }
+        .page-no-hf {
+            padding-top: 0;
+            padding-bottom: 0;
         }
         .header {
             position: absolute;
@@ -85,6 +89,9 @@
             position: relative;
             z-index: 1;
         }
+        .font-handwriting {
+            font-family: 'Dancing Script', cursive;
+        }
 
         @media print {
             body {
@@ -104,8 +111,29 @@
 </head>
 <body class="bg-gray-100">
 
+    <!-- Trang Thư Ngỏ -->
+    <div class="page page-no-hf watermark-bg" id="page0">
+        <div class="p-12 flex-grow flex items-center justify-center page-content">
+            <div class="border-4 border-gray-300 p-10 rounded-lg h-full w-full flex flex-col">
+                <h1 class="font-handwriting text-6xl text-center mb-8 text-brand-red">Thư Ngỏ</h1>
+                <div class="text-lg text-gray-700 space-y-6 flex-grow text-justify">
+                    <p>Kính gửi Quý Đối tác,</p>
+                    <p>Thay mặt Công ty TNHH Sản xuất Quà tặng Thành Công, tôi xin gửi đến Quý vị lời chào trân trọng và lời cảm ơn chân thành vì đã dành thời gian tìm hiểu về chúng tôi.</p>
+                    <p>Được thành lập vào năm 2018, Quà tặng Thành Công ra đời từ một trăn trở đơn giản: làm thế nào để giúp các doanh nghiệp Việt Nam tạo dấu ấn thương hiệu một cách hiệu quả và ý nghĩa nhất thông qua những món quà tặng? Chúng tôi nhận thấy rằng một chiếc túi vải không chỉ là vật dụng, mà còn là một "đại sứ thầm lặng", mang câu chuyện và hình ảnh của thương hiệu đi khắp mọi nơi.</p>
+                    <p>Với triết lý kinh doanh đặt sự thành công của đối tác làm trọng tâm, chúng tôi không chỉ sản xuất ra những sản phẩm chất lượng, mà còn mang đến một giải pháp toàn diện: từ tư vấn tận tâm, thiết kế sáng tạo đến sản phẩm hoàn thiện với chi phí tối ưu. Sự thành công của chiến dịch quảng bá, niềm vui của khách hàng khi nhận quà, và sự lan tỏa thương hiệu của Quý vị chính là thành công lớn nhất của chúng tôi.</p>
+                    <p>Chúng tôi tin rằng, với một đội ngũ tâm huyết và một quy trình sản xuất được kiểm soát chặt chẽ tại xưởng, Quà tặng Thành Công sẽ là người bạn đồng hành đáng tin cậy trên hành trình "Cùng Đối Tác Đi Đến Thành Công".</p>
+                </div>
+                <div class="mt-auto text-right">
+                    <p class="text-lg font-semibold">Trân trọng,</p>
+                    <p class="text-lg font-semibold">Giám đốc</p>
+                    <p class="font-handwriting text-3xl mt-4 text-brand-blue">Nguyễn Thị Thu Hiền</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Trang 1: Bìa -->
-    <div class="page" id="page1">
+    <div class="page watermark-bg" id="page1">
         <div class="header">
             <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
             <span>Quà Tặng Thành Công Company Profile</span>
@@ -121,7 +149,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 1 / 10</span>
+            <span>Trang 2 / 11</span>
         </div>
     </div>
 
@@ -178,7 +206,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 2 / 10</span>
+            <span>Trang 3 / 11</span>
         </div>
     </div>
 
@@ -255,7 +283,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 3 / 10</span>
+            <span>Trang 4 / 11</span>
         </div>
     </div>
     
@@ -302,7 +330,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 4 / 10</span>
+            <span>Trang 5 / 11</span>
         </div>
     </div>
     
@@ -367,7 +395,7 @@
         </div>
          <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 5 / 10</span>
+            <span>Trang 6 / 11</span>
         </div>
     </div>
 
@@ -423,7 +451,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 6 / 10</span>
+            <span>Trang 7 / 11</span>
         </div>
     </div>
 
@@ -479,7 +507,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 7 / 10</span>
+            <span>Trang 8 / 11</span>
         </div>
     </div>
 
@@ -535,7 +563,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 8 / 10</span>
+            <span>Trang 9 / 11</span>
         </div>
     </div>
 
@@ -603,7 +631,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 9 / 10</span>
+            <span>Trang 10 / 11</span>
         </div>
     </div>
 
@@ -641,7 +669,7 @@
         </div>
         <div class="footer">
             <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
-            <span>Trang 10 / 10</span>
+            <span>Trang 11 / 11</span>
         </div>
     </div>
 
