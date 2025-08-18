@@ -27,6 +27,12 @@ def dich_vu_tiep_thi_so_da_kenh():
     return render_template("dich-vu-tiep-thi-so-da-kenh.html")
 # -----------------------------------------------
 
+# --- THÊM ROUTE MỚI CHO TRANG "QUÀ TẶNG THÀNH CÔNG PROFILE" ---
+@app.route("/HSNL-QTTC/")
+def HSNL_QTTC():
+    return render_template("HSNL-QTTC.html")
+# -----------------------------------------------
+
 # 3. Chạy ứng dụng
 #    - `if __name__ == "__main__":` là một quy ước trong Python. Nó đảm bảo rằng
 #      lệnh `app.run()` chỉ được thực thi khi bạn chạy trực tiếp file này 

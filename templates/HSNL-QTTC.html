@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ năng lực - Công ty TNHH Quà Tặng Thành Công</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f0f2f5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .page {
+            width: 8.27in; /* A4 width */
+            min-height: 11.69in; /* A4 height */
+            margin: 2rem auto;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px; /* Space for header */
+            padding-bottom: 40px; /* Space for footer */
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 48px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.8rem;
+            color: #6b7280;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            z-index: 10;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 48px; /* Corresponds to p-12 of page content */
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.8rem;
+            color: #6b7280;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            z-index: 10;
+        }
+        .brand-red { color: #d9232d; }
+        .brand-blue { color: #0081c6; }
+        .brand-green { color: #00a651; }
+        .bg-brand-red { background-color: #d9232d; }
+        .bg-brand-blue { background-color: #0081c6; }
+        .bg-brand-gray { background-color: #333333; }
+        
+        /* Watermark Style */
+        .watermark-bg {
+            position: relative;
+        }
+        .watermark-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/LOGO-QUA-TANG-THANH-CONG.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60%;
+            opacity: 0.05; /* Opacity set to 5% for more subtlety */
+            z-index: 0;
+        }
+        .page-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100vh;
+            }
+            .header, .footer {
+                 padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Trang 1: Bìa -->
+    <div class="page" id="page1">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="flex-grow flex flex-col justify-center items-center bg-brand-gray text-white p-8 relative page-content">
+            <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-10" style="background-image: url('images/tui-recoflife.jpg')"></div>
+            <div class="text-center z-10">
+                <img src="images/LOGO-QUA-TANG-THANH-CONG.jpg" alt="Logo Công ty Quà Tặng Thành Công" class="w-80 h-auto mx-auto mb-8 bg-white p-4 rounded-lg shadow-lg">
+                <h1 class="text-5xl md:text-5xl font-black tracking-wider uppercase brand-green mb-3">Cùng Đối Tác</h1>
+                <h2 class="text-4xl md:text-4xl font-black tracking-widest uppercase mb-3">Đi Đến</h2>
+                <h2 class="text-5xl md:text-5xl font-black tracking-widest uppercase brand-red">Thành Công</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 1 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 2: Giới thiệu -->
+    <div class="page watermark-bg" id="page2">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Về Chúng Tôi</h2>
+                <p class="text-gray-500 mt-2">Nền tảng vững chắc cho sự hợp tác thành công</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 flex-grow">
+                <div class="flex flex-col justify-center">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold brand-blue mb-2">Thành Lập</h3>
+                        <p class="text-gray-700">Từ 2018</p>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold brand-blue mb-2">Lĩnh Vực Hoạt Động</h3>
+                        <p class="text-gray-700">Xưởng sản xuất trực tiếp túi vải và quà tặng doanh nghiệp theo yêu cầu (B2B).</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold brand-blue mb-2">Giá Trị Cốt Lõi</h3>
+                        <p class="text-gray-700 italic">"Chúng tôi không chỉ sản xuất túi vải, chúng tôi tạo ra những sản phẩm mang dấu ấn thương hiệu, đồng hành cùng sự thành công của khách hàng."</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-around space-y-6">
+                    <div class="flex items-center bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-sm">
+                        <svg class="w-16 h-16 brand-red mr-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <div>
+                            <h4 class="text-2xl font-bold">6+ Năm</h4>
+                            <p class="text-gray-600">Kinh nghiệm trong ngành</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-sm">
+                        <svg class="w-16 h-16 brand-red mr-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <div>
+                            <h4 class="text-2xl font-bold">Xưởng Trực Tiếp</h4>
+                            <p class="text-gray-600">Kiểm soát chất lượng & giá cả</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-sm">
+                        <svg class="w-16 h-16 brand-red mr-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <div>
+                            <h4 class="text-2xl font-bold">Toàn Quốc</h4>
+                            <p class="text-gray-600">Phục vụ khách hàng khắp cả nước</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 2 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 3: Sản phẩm & Dịch vụ -->
+    <div class="page watermark-bg" id="page3">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Sản Phẩm & Dịch Vụ</h2>
+                <p class="text-gray-500 mt-2">Giải pháp quà tặng toàn diện và linh hoạt</p>
+            </div>
+            <div class="grid grid-cols-3 gap-8 flex-grow">
+                <!-- Sản phẩm chính -->
+                <div class="col-span-2 flex flex-col">
+                    <h3 class="text-2xl font-bold brand-blue border-b-2 border-brand-red pb-2 mb-4">Sản Phẩm Chính</h3>
+                    <div class="grid grid-cols-2 grid-rows-4 gap-4 flex-grow">
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <img src="images/tui-youmakemybeet1.jpg" class="w-full object-cover rounded-md mb-2 flex-grow" style="height: 100px;">
+                            <p class="font-semibold text-sm mt-auto">Túi Tote / Canvas</p>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <img src="images/tui-baovemoitruong1.jpg" class="w-full object-cover rounded-md mb-2 flex-grow" style="height: 100px;">
+                            <p class="font-semibold text-sm mt-auto">Túi Vải Không Dệt</p>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <img src="images/tui-fpt-1.jpg" class="w-full object-cover rounded-md mb-2 flex-grow" style="height: 100px;">
+                            <p class="font-semibold text-sm mt-auto">Balo Dây Rút</p>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <img src="images/tui-wabu.jpg" class="w-full object-cover rounded-md mb-2 flex-grow" style="height: 100px;">
+                            <p class="font-semibold text-sm mt-auto">Túi Đựng Ly</p>
+                        </div>
+                        <!-- Placeholder Images -->
+                        <div class="bg-gray-100/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <div class="bg-gray-200 w-full rounded-md mb-2 flex items-center justify-center text-gray-400 text-xs flex-grow" style="height: 100px;">Ảnh</div>
+                            <p class="text-sm font-semibold mt-auto">Tên sản phẩm 5</p>
+                        </div>
+                         <div class="bg-gray-100/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <div class="bg-gray-200 w-full rounded-md mb-2 flex items-center justify-center text-gray-400 text-xs flex-grow" style="height: 100px;">Ảnh</div>
+                            <p class="text-sm font-semibold mt-auto">Tên sản phẩm 6</p>
+                        </div>
+                         <div class="bg-gray-100/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <div class="bg-gray-200 w-full rounded-md mb-2 flex items-center justify-center text-gray-400 text-xs flex-grow" style="height: 100px;">Ảnh</div>
+                            <p class="text-sm font-semibold mt-auto">Tên sản phẩm 7</p>
+                        </div>
+                         <div class="bg-gray-100/70 backdrop-blur-sm rounded-lg p-2 text-center shadow-sm flex flex-col">
+                            <div class="bg-gray-200 w-full rounded-md mb-2 flex items-center justify-center text-gray-400 text-xs flex-grow" style="height: 100px;">Ảnh</div>
+                            <p class="text-sm font-semibold mt-auto">Tên sản phẩm 8</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dịch vụ -->
+                <div class="flex flex-col">
+                    <h3 class="text-2xl font-bold brand-blue border-b-2 border-brand-red pb-2 mb-4">Dịch Vụ Cộng Thêm</h3>
+                    <div class="bg-brand-red text-white p-6 rounded-lg shadow-lg flex-grow flex flex-col justify-center space-y-4">
+                        <div class="flex items-start">
+                            <span class="font-bold text-xl mr-3 mt-1">✓</span>
+                            <p><span class="font-bold">MIỄN PHÍ</span> Tư vấn & Thiết kế.</p>
+                        </div>
+                         <div class="flex items-start">
+                            <span class="font-bold text-xl mr-3 mt-1">✓</span>
+                            <p><span class="font-bold">MIỄN PHÍ</span> Sản xuất túi mẫu.</p>
+                        </div>
+                         <div class="flex items-start">
+                            <span class="font-bold text-xl mr-3 mt-1">✓</span>
+                            <p><span class="font-bold">MIỄN PHÍ</span> Giao hàng nội thành HCM.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 3 / 10</span>
+        </div>
+    </div>
+    
+    <!-- Trang 4: Năng lực sản xuất -->
+    <div class="page watermark-bg" id="page4">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Năng Lực Sản Xuất</h2>
+                <p class="text-gray-500 mt-2">Công nghệ hiện đại - Kỹ thuật vượt trội</p>
+            </div>
+            <div class="grid grid-cols-2 gap-10 flex-grow">
+                <div class="flex flex-col justify-center items-center bg-brand-blue text-white rounded-lg p-8 shadow-xl">
+                    <p class="text-2xl font-light">Năng lực sản xuất lên đến</p>
+                    <p class="text-7xl font-black my-2">80.000</p>
+                    <p class="text-2xl font-light">Sản phẩm / tháng</p>
+                </div>
+                <div class="space-y-6 flex flex-col justify-center bg-white/70 backdrop-blur-sm p-6 rounded-lg">
+                    <div>
+                        <h3 class="text-xl font-bold brand-blue mb-3">Kỹ Thuật May Tinh Xảo</h3>
+                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                            <li><span class="font-semibold">Thợ may lành nghề:</span> 10 năm kinh nghiệm trở lên.</li>
+                            <li><span class="font-semibold">Dấu quai & miệng túi:</span> Tăng tính thẩm mỹ, thanh lịch.</li>
+                            <li><span class="font-semibold">Kỹ thuật "lại mũi":</span> Chống bung, tưa sợi vải.</li>
+                            <li><span class="font-semibold">May chéo X gia cường:</span> Tăng sức chịu tải cho quai túi.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold brand-blue mb-3">Công Nghệ In Hiện Đại</h3>
+                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                            <li><span class="font-semibold">In Lụa (Phổ thông & Cao cấp):</span> Tối ưu chi phí.</li>
+                            <li><span class="font-semibold">In Chuyển Nhiệt / In PET:</span> Hình ảnh sắc nét, chất lượng cao.</li>
+                            <li><span class="font-semibold">In Decal:</span> Bền màu, đáp ứng thiết kế phức tạp.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">
+                 <img src="images/tui-cugoilakeo.jpg" class="w-full h-40 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 4 / 10</span>
+        </div>
+    </div>
+    
+    <!-- Trang 5: Quy trình làm việc -->
+    <div class="page watermark-bg" id="page5">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Quy Trình Làm Việc</h2>
+                <p class="text-gray-500 mt-2">7 bước chuyên nghiệp, rõ ràng và hiệu quả</p>
+            </div>
+            <div class="flex-grow flex flex-col justify-between">
+                <div class="grid grid-cols-[1fr_auto_1fr] grid-rows-5 gap-x-4 w-full max-w-3xl mx-auto">
+                    <!-- Step 1 to 6 -->
+                    <div class="col-start-1 row-start-1 bg-gray-50 p-4 rounded-lg shadow-sm h-24 flex flex-col justify-center items-center text-center">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-lg mb-2 flex-shrink-0">1</div>
+                        <h3 class="font-bold text-md">Tiếp Nhận Thông Tin</h3>
+                    </div>
+                    <div class="col-start-2 row-start-1 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <div class="col-start-3 row-start-1 bg-gray-50 p-4 rounded-lg shadow-sm h-24 flex flex-col justify-center items-center text-center">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-lg mb-2 flex-shrink-0">2</div>
+                        <h3 class="font-bold text-md">Tư Vấn & Thiết Kế</h3>
+                    </div>
+                    <div class="col-start-3 row-start-2 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="col-start-3 row-start-3 bg-gray-50 p-4 rounded-lg shadow-sm h-24 flex flex-col justify-center items-center text-center">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-lg mb-2 flex-shrink-0">3</div>
+                        <h3 class="font-bold text-md">Hợp Đồng & Làm Mẫu</h3>
+                    </div>
+                    <div class="col-start-2 row-start-3 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
+                    </div>
+                    <div class="col-start-1 row-start-3 bg-gray-50 p-4 rounded-lg shadow-sm h-24 flex flex-col justify-center items-center text-center">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-lg mb-2 flex-shrink-0">4</div>
+                        <h3 class="font-bold text-md">Sản Xuất Hàng Loạt</h3>
+                    </div>
+                    <div class="col-start-1 row-start-4 flex items-center justify-center">
+                         <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="col-start-1 row-start-5 bg-gray-50 p-4 rounded-lg shadow-sm h-24 flex flex-col justify-center items-center text-center">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-lg mb-2 flex-shrink-0">5</div>
+                        <h3 class="font-bold text-md">Kiểm Tra & Giao Hàng</h3>
+                    </div>
+                    <div class="col-start-2 row-start-5 flex items-center justify-center">
+                         <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <div class="col-start-3 row-start-5 bg-gray-50 p-4 rounded-lg shadow-sm h-24 flex flex-col justify-center items-center text-center">
+                        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-lg mb-2 flex-shrink-0">6</div>
+                        <h3 class="font-bold text-md">Hỗ Trợ & Feedback</h3>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <img src="images/tui-cugoilakeo.jpg" class="w-full h-40 object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+         <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 5 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 6: Khách hàng tiêu biểu 1 -->
+    <div class="page watermark-bg" id="page6">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Đối Tác Tiêu Biểu</h2>
+                <p class="text-gray-500 mt-2">Niềm tin từ những thương hiệu lớn</p>
+            </div>
+            <div class="grid grid-cols-3 grid-rows-2 gap-6 flex-grow">
+                <div class="relative rounded-lg shadow-lg overflow-hidden group">
+                    <img src="images/tui-insee1.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <p class="text-white text-2xl font-bold">INSEE</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group">
+                    <img src="images/tui-fpt-1.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <p class="text-white text-2xl font-bold">FPT Polytechnic</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group">
+                    <img src="images/tui-vichy-dercos1.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <p class="text-white text-2xl font-bold">VICHY</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group">
+                    <img src="images/tui-redminote12.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <p class="text-white text-2xl font-bold">Xiaomi</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group">
+                    <img src="images/tui-recoflife.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 text-center">
+                        <p class="text-white text-2xl font-bold">Và nhiều đối tác khác...</p>
+                    </div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm rounded-lg shadow-inner p-6 flex flex-col justify-center items-center text-center">
+                    <p class="font-bold text-lg brand-blue">Thời trang Thiều Hoa</p>
+                    <p class="font-bold text-lg brand-blue my-2">Thời trang Cocobebe</p>
+                    <p class="font-bold text-lg brand-blue">Ô tô Volvo</p>
+                    <p class="font-bold text-lg brand-blue mt-2">Đại học KHTN</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 6 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 7: Khách hàng tiêu biểu 2 -->
+    <div class="page watermark-bg" id="page7">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Đối Tác Tiêu Biểu (tt.)</h2>
+                <p class="text-gray-500 mt-2">Sự hài lòng của đối tác là minh chứng cho chất lượng</p>
+            </div>
+            <div class="grid grid-cols-3 grid-rows-2 gap-6 flex-grow">
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 1</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 1</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 2</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 2</p>
+                    </div>
+                </div>
+                 <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 3</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 3</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 4</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 4</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 5</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 5</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 6</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 6</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 7 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 8: Khách hàng tiêu biểu 3 -->
+    <div class="page watermark-bg" id="page8">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Đối Tác Tiêu Biểu (tt.)</h2>
+                <p class="text-gray-500 mt-2">Đồng hành cùng sự phát triển của nhiều thương hiệu</p>
+            </div>
+             <div class="grid grid-cols-3 grid-rows-2 gap-6 flex-grow">
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 7</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 7</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 8</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 8</p>
+                    </div>
+                </div>
+                 <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 9</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 9</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 10</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 10</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 11</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 11</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg shadow-lg overflow-hidden group bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-500">Ảnh dự án 12</p>
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p class="text-white text-2xl font-bold">Tên Đối Tác 12</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 8 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 9: Cam kết & Chính sách -->
+    <div class="page watermark-bg" id="page9">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Cam Kết & Chính Sách</h2>
+                <p class="text-gray-500 mt-2">An tâm hợp tác - Lợi ích tối đa</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 flex-grow">
+                <div class="bg-white/70 backdrop-blur-sm rounded-lg shadow-md p-8">
+                    <h3 class="text-2xl font-bold brand-blue mb-6 text-center">4 CAM KẾT VÀNG</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <svg class="w-12 h-12 brand-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">ĐÚNG TIẾN ĐỘ</h4>
+                                <p class="text-sm text-gray-600">Đảm bảo lịch sản xuất và giao hàng như đã hẹn.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                             <svg class="w-12 h-12 brand-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">ĐÚNG CHẤT LƯỢNG</h4>
+                                <p class="text-sm text-gray-600">Sản phẩm thực tế như mẫu đã duyệt.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-12 h-12 brand-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">BẢO MẬT TUYỆT ĐỐI</h4>
+                                <p class="text-sm text-gray-600">Thông tin khách hàng và thiết kế độc quyền.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-12 h-12 brand-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5V4H4zm0 9h5v5H4v-5zm9-9h5v5h-5V4zm0 9h5v5h-5v-5z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">TRÁCH NHIỆM CAO</h4>
+                                <p class="text-sm text-gray-600">Đền bù thỏa đáng nếu có lỗi từ nhà sản xuất.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm rounded-lg shadow-md p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold brand-blue mb-6 text-center">CHÍNH SÁCH GIÁ</h3>
+                    <div class="flex-grow flex flex-col justify-center space-y-4">
+                        <div class="text-center">
+                            <p class="text-lg">Số lượng tối thiểu (MOQ)</p>
+                            <p class="text-5xl font-extrabold brand-red">100</p>
+                            <p class="text-lg">sản phẩm / đơn hàng</p>
+                        </div>
+                        <div class="text-center border-t pt-4 mt-4">
+                            <p class="text-lg">Khoảng giá tham khảo</p>
+                            <p class="text-3xl font-bold brand-red">10.000đ - 300.000đ</p>
+                            <p class="text-sm text-gray-600 mt-2">Giá cuối cùng phụ thuộc vào: Số lượng, chất liệu, kích thước, kỹ thuật in và các yêu cầu khác.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 9 / 10</span>
+        </div>
+    </div>
+
+    <!-- Trang 10: Liên hệ -->
+    <div class="page watermark-bg" id="page10">
+        <div class="header">
+            <a href="tel:02837112666" class="hover:underline">Hotline: 028.37112.666</a>
+            <span>Quà Tặng Thành Công Company Profile</span>
+        </div>
+        <div class="p-12 flex flex-col h-full flex-grow page-content">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-red uppercase tracking-wider">Liên Hệ Với Chúng Tôi</h2>
+                <p class="text-gray-500 mt-2">Sẵn sàng lắng nghe và tư vấn giải pháp tốt nhất cho bạn</p>
+            </div>
+            <div class="grid grid-cols-2 gap-10 flex-grow">
+                <div class="space-y-4 bg-white/70 backdrop-blur-sm p-6 rounded-lg">
+                    <h3 class="text-xl font-bold brand-blue">CÔNG TY TNHH QUÀ TẶNG THÀNH CÔNG</h3>
+                    <p class="flex items-start"><svg class="w-6 h-6 mr-3 brand-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> <span><span class="font-semibold">Văn phòng:</span> 154 Phạm Văn Chiêu, Phường 9, Quận Gò Vấp, TP.HCM</span></p>
+                    <p class="flex items-start"><svg class="w-6 h-6 mr-3 brand-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg> <span><span class="font-semibold">Xưởng:</span> Xã Đông Thạnh, Huyện Hóc Môn, TP.HCM</span></p>
+                    <p class="flex items-center"><svg class="w-6 h-6 mr-3 brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> <a href="tel:02837112666" class="hover:underline"><span class="font-semibold">Điện thoại:</span> 0283 711 2666</a></p>
+                    <p class="flex items-center"><svg class="w-6 h-6 mr-3 brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h8a2 2 0 012 2v4z"></path></svg> <a href="https://zalo.me/0835130333" target="_blank" class="hover:underline"><span class="font-semibold">Zalo:</span> 0835 130 333</a></p>
+                    <p class="flex items-center"><svg class="w-6 h-6 mr-3 brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> <a href="mailto:info@quatangthanhcong.com" class="hover:underline"><span class="font-semibold">Email:</span> info@quatangthanhcong.com</a></p>
+                    <p class="flex items-center"><svg class="w-6 h-6 mr-3 brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9M3 12a9 9 0 019-9m-9 9h18"></path></svg> <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline"><span class="font-semibold">Website:</span> www.quatangthanhcong.com</a></p>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-4">
+                    <div class="bg-white p-4 border-4 border-brand-red rounded-lg shadow-xl">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://www.quatangthanhcong.com" alt="QR Code đến website" class="w-64 h-64">
+                    </div>
+                    <p class="font-semibold text-lg">Quét mã để xem Website</p>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 mt-auto border-t pt-4">
+                Với triết lý “Có nhu cầu sẽ có giải pháp”, đội ngũ của chúng tôi luôn nghiên cứu sáng tạo để đáp ứng mọi thách thức từ khách hàng, dù là yêu cầu khắt khe nhất!
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.quatangthanhcong.com" target="_blank" class="hover:underline">www.quatangthanhcong.com</a>
+            <span>Trang 10 / 10</span>
+        </div>
+    </div>
+
+</body>
+</html>
